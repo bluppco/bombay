@@ -1,0 +1,16 @@
+---
+// IMPORTING LAYOUTS
+import Layout from "../layouts/Layout.astro"
+import Container from "../layouts/Container.astro"
+
+// IMPORTING COMPONENTS
+import Header from "../components/header/Header.astro"
+import Blogs from "../components/home/Blogs.astro"
+---
+<!-- Using the imported 'Layout' component as the outer container -->
+<Layout>
+	<Container>
+		<!-- Using the imported 'Header' component to include the header section -->
+		<Header />
+	</Container>
+</Layout>
