@@ -1,0 +1,12 @@
+---
+// Destructuring the 'href' prop from the Astro component's props
+const { href } = Astro.props
+---
+<!-- Anchor element with a link based on the 'href' prop -->
+<a href={ href }>
+    <!-- Heading 2 with specific styling -->
+    <h2 class="font-josefin font-bold text-3xl uppercase border-b-2 border-transparent hover:border-black w-fit">
+        <!-- Content slot that allows dynamic content -->
+        <slot />
+    </h2>
+</a>

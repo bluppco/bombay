@@ -1,16 +1,17 @@
 ---
+// IMPORTING LAYOUTS
+import Layout from "../layouts/Layout.astro"
+import Container from "../layouts/Container.astro"
 
+// IMPORTING COMPONENTS
+import Header from "../components/header/Header.astro"
+import Masthead from "../components/home/Masthead.astro"
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<!-- Using the imported 'Layout' component as the outer container -->
+<Layout>
+	<Container>
+		<!-- Using the imported 'Header' component to include the header section -->
+		<Header />
+		<Masthead />
+	</Container>
+</Layout>

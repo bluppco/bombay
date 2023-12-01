@@ -1,0 +1,66 @@
+---
+// Importing the 'getCollection' function from the Astro content module
+import { getCollection } from "astro:content"
+
+// Fetching data from the 'header' collection and sorting it based on the 'order' property
+let header_data = await getCollection("header")
+header_data = header_data.sort((a, b) => a.data.order - b.data.order)
+---
+<!-- Header section containing a navigation menu -->
+<header>
+    <!-- Navigation bar with specific styling -->
+    <nav class="flex justify-center items-center py-3 border-y-2 border-black">
+        <!-- Unordered list for navigation items -->
+        <ul class="flex gap-8">
+            <!-- Mapping through the 'header_data' array to generate navigation items -->
+            {
+
+                header_data.map( ( item ) => {
+
+                    return (
+                        // Navigation item with dynamic content and conditional dropdown
+                        <li class="flex items-center gap-1 relative group cursor-pointer uppercase font-inconsolata border-b-2 border-transparent hover:border-black transition-all duration-200 text-lg w-fit">
+                            <a href={ "/" + item.data.slug } aria-label={ "Navigation" + item.data.slug }>{ item.data.title }</a>
+                            {
+                                // Conditional rendering of dropdown if 'has_dropdown' is true
+                                item.data.has_dropdown &&
+                                // Dropdown arrow icon
+                                <div>
+                                    <img
+                                        src="/icons/arrow_down.svg"
+                                        class="w-4 h-4"
+                                        alt=""
+                                    />
+                                    <div class="hidden group-hover:block group-hover:flex-col absolute px-4 bg-white left-0 z-20 top-[32px] w-48 gap-2">
+                                        <div class="flex flex-col">
+                                        {
+                                            // Mapping through dropdown items
+                                            item.data.items.map( ( sub_item, sub_item_index ) => {
+
+                                                return(
+                                                    // Dropdown item with a link to the specified slug
+                                                    <div class="py-2">
+                                                        <a href={ "/" + item.data.slug + "/" + sub_item.slug }>
+                                                            <div class="font-inconsolata uppercase text-lg border-b-2 border-transparent hover:border-black transition-all duration-200 w-fit">{ sub_item.title }</div>
+                                                        </a>
+                                                    </div>
+                                                    <div class={`w-full bg-zinc-200 h-px ${ sub_item_index + 1 < item.data.items.length ? "block" : "hidden" }`}></div>
+                                                )
+
+                                            })
+
+                                        }
+                                        </div>
+                                    </div>
+                                </div>
+
+                            }
+                        </li>
+                    )
+
+                })
+
+            }
+        </ul>
+    </nav>
+</header>
