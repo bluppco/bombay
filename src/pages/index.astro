@@ -6,6 +6,9 @@ import Container from "../layouts/Container.astro"
 // IMPORTING COMPONENTS
 import Header from "../components/header/Header.astro"
 import Masthead from "../components/home/Masthead.astro"
+
+//GET HOST
+const { hostname } = Astro.url
 ---
 <!-- Using the imported 'Layout' component as the outer container -->
 <Layout>
