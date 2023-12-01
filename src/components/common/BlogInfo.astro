@@ -1,0 +1,21 @@
+---
+// Destructuring specific props from the Astro component's props
+const { date_href, date, publisher, publisher_href } = Astro.props
+---
+<div>
+    <!-- Date information with specific styling -->
+    <span class="font-inconsolata text-sm font-semibold uppercase">Posted on</span>
+    <!-- Anchor element linking to the specified 'href' -->
+    <a href={ date_href }>
+        <span class="font-inconsolata text-sm font-semibold uppercase hover:underline bg-bombay_yellow py-1 px-2">{ date }</span>
+    </a>
+    <!-- Separator line below the date -->
+    <div class="h-[2px] bg-black w-full my-[2px]"></div>
+    <!-- Title information with hover effect for underlining -->
+    <span class="font-inconsolata text-sm hover:underline">by</span>
+    <a href={ publisher_href }>
+        <span class="font-inconsolata text-sm font-bold hover:underline">{ publisher }</span>
+    </a>
+    <!-- Separator line below the title -->
+    <div class="h-[2px] bg-black w-full my-[2px]"></div>
+</div>

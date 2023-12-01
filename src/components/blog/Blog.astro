@@ -1,0 +1,53 @@
+---
+// IMPORTING COMPONENTS
+import BlogInfo from "../common/BlogInfo.astro"
+import CategoryInfo from "./CategoryInfo.astro"
+import PreviousNextBlog from "./PreviousNextBlog.astro"
+
+// IMPORTING ATOMS
+import H1 from "../../atoms/H1.astro"
+import Paragraph from "../../atoms/Paragraph.astro"
+---
+<!-- Blog Section -->
+<section class="py-20">
+    <!-- Blog Title -->
+    <H1>Worth A Thousand Words</H1>
+    <div class="py-6">
+        <!-- Blog Information -->
+        <BlogInfo
+            date_href=""
+            date="October 17, 2008"
+            publisher="Theme Admin"
+            publisher_href=""
+        />
+    </div>
+    <!-- Main Content Section -->
+    <div class="space-y-10">
+        <!-- Blog Image -->
+        <div class="w-full aspect-[3/1]">
+            <img
+                src="/images/boat.jpg"
+                alt=""
+                class="w-full h-full object-cover"
+            />
+        </div>
+        <!-- Blog Text -->
+        <Paragraph>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolorum similique repellat saepe harum ullam sint explicabo sequi! Nam mollitia cumque illum voluptas, omnis non laudantium veritatis animi sint. Dicta beatae minima delectus incidunt quibusdam ratione vitae consequuntur quis nesciunt in. Modi temporibus accusantium quod, vero quo perferendis eum non tempora dolor, deserunt reiciendis distinctio fugiat, veniam alias aliquid beatae nobis facere consectetur voluptas quis? Inventore accusamus, consequatur cupiditate assumenda commodi reprehenderit nemo tenetur, eos illum perspiciatis excepturi consequuntur fuga, placeat quos dolor vero! Pariatur et possimus impedit sed autem soluta deserunt quam ducimus voluptatum veniam aspernatur libero in enim tempore rem dignissimos mollitia asperiores, natus facere! Ea, nam consequuntur unde amet nihil ipsa, quibusdam neque soluta enim corrupti minima officiis iste quos facilis repudiandae. Ab, maiores iste modi tempora numquam suscipit enim alias voluptatem non perspiciatis autem accusamus similique eius ipsum, voluptates vel quisquam, consequatur eos distinctio quibusdam. Ipsum voluptatem, voluptates voluptas magni rerum officia itaque. Illo sit earum quibusdam ad facilis ducimus debitis deleniti, pariatur distinctio! Impedit nostrum ut soluta alias ea officia commodi debitis ab illo, aut dolor mollitia ratione nam harum rerum excepturi minus magni, maiores explicabo ipsa? Harum eum laborum explicabo facere odit debitis cum! Maiores praesentium nisi nemo ad, assumenda sequi hic cum, pariatur blanditiis unde adipisci aliquid earum repellat sit consectetur facere vero esse sapiente. Quo illum labore quibusdam asperiores! Voluptatibus quaerat ut, voluptas ad sequi nulla porro maxime. In vero nobis et necessitatibus quos odio excepturi cumque non laborum soluta ipsum adipisci maiores totam voluptatum ut, sit quo commodi consequuntur inventore harum at veritatis cum asperiores! Impedit, voluptate a iste tempore nisi nobis repellendus nihil veritatis, laudantium possimus eveniet dolores? Vitae corporis earum quaerat repudiandae non unde accusamus, dignissimos exercitationem assumenda necessitatibus ut illum odio porro pariatur quae? Ipsa natus fugiat recusandae.</Paragraph>
+        <!-- Blog Category Information -->
+        <div>
+            <CategoryInfo
+                href=""
+                category="Uncategorized"
+            />
+        </div>
+    </div>
+    <!-- Navigation to Previous and Next Blogs -->
+    <div class="pt-40">
+        <PreviousNextBlog
+            previous="Elements"
+            previous_href=""
+            next="Elements"
+            next_href=""
+        />
+    </div>
+</section>

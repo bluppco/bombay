@@ -23,6 +23,13 @@ export default {
 				// Adding Inconsolata to the Font Family
 				"inconsolata": [ "Inconsolata", "monospace" ]
 
+			},
+
+			// Customizing Colors
+			colors: {
+
+				"bombay_yellow": "#fee85d"
+
 			}
 
 		},

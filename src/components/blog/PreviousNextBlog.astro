@@ -1,0 +1,30 @@
+---
+// Destructuring properties from the Astro context
+const {
+
+    previous,
+    previous_href,
+    next,
+    next_href
+
+} = Astro.props
+---
+<!-- Navigation to Previous and Next Blog Blogs -->
+<section class="border-y-2 py-4 border-black flex justify-between">
+    <!-- Previous Blog Section -->
+    <div>
+        <p class="font-inconsolata italic text-sm">Previous Blog</p>
+        <!-- Link to Previous Blog -->
+        <a href={ previous_href }>
+            <p class="font-inconsolata font-bold text-xl border-b-2 border-transparent hover:border-black">{ previous }</p>
+        </a>
+    </div>
+    <!-- Next Blog Section -->
+    <div>
+        <p class="font-inconsolata italic text-sm">Next Blog</p>
+        <!-- Link to Next Blog -->
+        <a href={ next_href }>
+            <p class="font-inconsolata font-bold text-xl border-b-2 border-transparent hover:border-black">{ next }</p>
+        </a>
+    </div>
+</section>

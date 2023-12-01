@@ -1,0 +1,14 @@
+---
+// Destructuring properties from the Astro context
+const { href, category } = Astro.props
+---
+<div class="border-b-2 border-black pb-1">
+    <!-- Category Information -->
+    <!-- Displaying a border and the label "Posted in" for category information -->
+    <span class="font-inconsolata text-sm">Posted in</span>
+    <!-- Category Link -->
+    <!-- Link to the specified category with hover underline effect -->
+    <a href={ href }>
+        <span class="font-inconsolata text-sm hover:underline">{ category }</span>
+    </a>
+</div>
