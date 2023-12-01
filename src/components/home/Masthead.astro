@@ -1,0 +1,47 @@
+---
+// IMPORTING COMPONENTS
+import NavigationBar from "../common/NavigationBar.astro"
+
+// IMPORTING ATOMS
+import H1 from "../../atoms/H1.astro"
+import H2 from "../../atoms/H2.astro"
+---
+<!-- Section containing author information and a grid layout -->
+<section class="py-10">
+    <!-- Heading 1 displaying the author information -->
+    <H1>Author: Theme Admin</H1>
+    <!-- Grid layout with 4 columns and a gap -->
+    <div class="grid grid-cols-4 gap-10 pt-10">
+        <!-- First column containing a navigation bar component -->
+        <div>
+            <NavigationBar
+                href=""
+                date="October 17, 2008"
+                title="Theme Admin"
+            />
+        </div>
+        <!-- Second column spanning 3 columns -->
+        <div class="col-span-3">
+            <!-- Heading 2 with a link -->
+            <H2 href="">Worth A Thousand Words</H2>
+            <div class="pl-10">
+                <!-- Image container with specific dimensions and aspect ratio -->
+                <div class="w-[480px] aspect-[3/2] py-4">
+                    <img
+                        src="/images/boat.jpg"
+                        alt="boat"
+                        class="w-full h-full object-cover"
+                    />
+                </div>
+                <!-- Bottom border and title below the image -->
+                <div class="border-b border-black pb-3 w-24">
+                    <p class="font-inconsolata italic">Boat</p>
+                </div>
+            </div>
+            <!-- Additional content below the image -->
+            <div class="py-10">
+                <p class="font-inconsolata text-lg">Boat.</p>
+            </div>
+        </div>
+    </div>
+</section>
