@@ -8,8 +8,8 @@ const {
     title,
     src,
     alt,
-    sub_title,
-    text,
+    description,
+    date,
     href
 
 } = Astro.props
@@ -26,13 +26,13 @@ const {
                 class="w-full h-full object-cover"
             />
         </div>
-        <!-- Bottom border and title below the image -->
-        <div class="border-b border-black pb-3 w-24">
-            <p class="font-inconsolata italic">{ sub_title }</p>
+        <!-- Bottom border and description below the image -->
+        <div class="border-b border-black pb-3">
+            <p class="font-inconsolata italic">{ description }</p>
         </div>
     </div>
-    <!-- Additional content below the image -->
+    <!-- date -->
     <div class="py-10">
-        <p class="font-inconsolata text-lg">{ text }</p>
+        <p class="font-inconsolata text-lg">{ date }</p>
     </div>
 </div>
