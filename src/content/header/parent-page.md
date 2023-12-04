@@ -1,7 +1,7 @@
 ---
 title: Parent Page
 slug: parent-page
-order: 2
+order: 3
 has_dropdown: true
 items: [
     {
